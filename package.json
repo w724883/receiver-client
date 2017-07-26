@@ -11,9 +11,15 @@
     "url": "git+https://github.com/w724883/receiver-client.git"
   },
   "keywords": [
-    "receiver"
+    "receiver",
+    "http",
+    "webpack",
+    "node"
   ],
-  "author": "w724883",
+  "files": [
+    "index.js"
+  ],
+  "author": "806944687@qq.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/w724883/receiver-client/issues"
