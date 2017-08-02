@@ -46,7 +46,6 @@ module.exports = function(params){
                         form.append('to',path.join(parse.pathname,path.relative(value.from,ways)));
                         form.append('file', fs.createReadStream(ways));
                         console.log(ways);
-                        console.log(path.join(parse.pathname,path.relative(value.from,ways)));
                     }
                 });
             });
