@@ -1,0 +1,110 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\nodejs\\node.exe',
+1 verbose cli   'D:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'D:\\www\\receiver\\receiver-client',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\weiruizhe\AppData\Roaming\npm-cache\receiver-client\1.0.9\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\weiruizhe\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle receiver-client@1.0.9~prepublish: receiver-client@1.0.9
+11 silly lifecycle receiver-client@1.0.9~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\weiruizhe\\AppData\\Roaming\\npm-cache\\receiver-client\\1.0.9\\package.tgz',
+12 verbose tar pack   'D:\\www\\receiver\\receiver-client' ]
+13 verbose tarball C:\Users\weiruizhe\AppData\Roaming\npm-cache\receiver-client\1.0.9\package.tgz
+14 verbose folder D:\www\receiver\receiver-client
+15 verbose addLocalTarball adding from inside cache C:\Users\weiruizhe\AppData\Roaming\npm-cache\receiver-client\1.0.9\package.tgz
+16 verbose correctMkdir C:\Users\weiruizhe\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd receiver-client@1.0.9
+18 verbose afterAdd C:\Users\weiruizhe\AppData\Roaming\npm-cache\receiver-client\1.0.9\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\weiruizhe\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\weiruizhe\AppData\Roaming\npm-cache\receiver-client\1.0.9\package\package.json written
+21 silly publish { name: 'receiver-client',
+21 silly publish   version: '1.0.9',
+21 silly publish   description: 'receiver',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'node index' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/w724883/receiver-client.git' },
+21 silly publish   keywords: [ 'receiver', 'http', 'webpack', 'node' ],
+21 silly publish   author: { name: '806944687@qq.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/w724883/receiver-client/issues' },
+21 silly publish   homepage: 'https://github.com/w724883/receiver-client#readme',
+21 silly publish   dependencies: { request: '^2.81.0' },
+21 silly publish   readme: '## 用于推送代码到远程服务器\r\n\r\n- 安装\r\n\r\n[`npm install receiver-client`](https://www.npmjs.com/package/receiver-client)，**应该安装于客户端，服务端安装请看[receiver-server](https://github.com/w724883/receiver-server)**\r\n\r\n- 说明\r\n\r\n```javascript\r\nvar path = require(\'path\');\r\nvar receiverClient = require(\'receiver-client\');\r\n\r\n/*\r\n**\t参数以数组的形式传值，支持上传多个文件\r\n**\tfrom 上传目录（绝对路径，必填）\r\n**\tto 目标主机及推送路径（基于主机的根目录，必填）\r\n**\texcludes 排除的目录，多个目录用空格分隔（选填）\r\n*/\r\n\r\nreceiverClient([{\r\n\tfrom:path.resolve(\'./test\'),\r\n\tto:\'http://localhost:8999/www\'\r\n}]);\r\n\r\n```\r\n',
+21 silly publish   readmeFilename: 'readme.md',
+21 silly publish   gitHead: '19e80b76098c8182d3e26d61cf9ab55602ec7e0f',
+21 silly publish   _id: 'receiver-client@1.0.9',
+21 silly publish   _shasum: '8995cdebd08d1ae7e1c3bb590689f6da15f26312',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name receiver-client
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry http://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'receiver-client',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'receiver-client',
+26 silly mapToRegistry   name: 'receiver-client',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri http://registry.npmjs.org/receiver-client
+28 verbose publish registryBase http://registry.npmjs.org/
+29 silly publish uploading C:\Users\weiruizhe\AppData\Roaming\npm-cache\receiver-client\1.0.9\package.tgz
+30 verbose request uri http://registry.npmjs.org/receiver-client
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 13:31:57
+33 verbose request using bearer token for auth
+34 verbose request id 8872d078764f3eae
+35 http request PUT http://registry.npmjs.org/receiver-client
+36 http 403 http://registry.npmjs.org/receiver-client
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Wed, 02 Aug 2017 05:31:58 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-nrt6128-NRT',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1501651918.628049,VS0,VE537',
+37 verbose headers   vary: 'Accept-Encoding, Accept' }
+38 verbose request invalidating C:\Users\weiruizhe\AppData\Roaming\npm-cache\registry.npmjs.org\receiver-client on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.9." : receiver-client
+40 verbose stack     at makeError (d:\nvm\v6.11.1\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (d:\nvm\v6.11.1\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+40 verbose stack     at Request._callback (d:\nvm\v6.11.1\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+40 verbose stack     at Request.self.callback (d:\nvm\v6.11.1\node_modules\npm\node_modules\request\request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (d:\nvm\v6.11.1\node_modules\npm\node_modules\request\request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (d:\nvm\v6.11.1\node_modules\npm\node_modules\request\request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid receiver-client
+43 verbose cwd D:\www\receiver\receiver-client
+44 error Windows_NT 6.1.7601
+45 error argv "D:\\nodejs\\node.exe" "D:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v6.11.1
+47 error npm  v3.10.10
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.9." : receiver-client
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
