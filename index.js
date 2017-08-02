@@ -1,6 +1,7 @@
 var request = require('request');
 var path = require('path');
 var fs = require('fs');
+var url = require('url');
 
 function list(ways, excludes, handleFiles, depth) {
     depth = depth || 0;
@@ -33,16 +34,25 @@ function list(ways, excludes, handleFiles, depth) {
 
 
 module.exports = function(params){
-
-    if(!params.from || !params.to || !params.host) return "Arguments are required!";
-    list(params.from,params.excludes,function(ways,depth){    
-        fs.stat(ways, function(err, stats) {
-            if(stats.isFile()){
-                var form = request.post(params.host+'/receiver').form();
-                form.append('to',path.join(params.to,path.relative(params.from,ways)));
-                form.append('file', fs.createReadStream(ways));
-                console.log(ways);
-            }
+    if(params.length){
+        params.forEach(function(value,key){
+            if(!value.from || !value.to) return "Arguments are required!";
+            list(value.from,value.excludes,function(ways,depth){    
+                fs.stat(ways, function(err, stats) {
+                    if(stats.isFile()){
+                        var parse = url.parse(value.to)
+                        var host = parse.protocol+'//'+parse.host;
+                        var form = request.post(host+'/receiver').form();
+                        form.append('to',path.join(parse.pathname,path.relative(value.from,ways)));
+                        form.append('file', fs.createReadStream(ways));
+                        console.log(ways);
+                        console.log(path.join(parse.pathname,path.relative(value.from,ways)));
+                    }
+                });
+            });
         });
-    });
+    }else{
+        return "Arguments are Array!"
+    }
+    
 }
